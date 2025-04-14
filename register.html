@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - E-Learn Hub</title>
+    <link rel="stylesheet" href="login.css"> <!-- Reuse login.css for consistency -->
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>E-Learn Hub</h1>
+            <p>Learn, Grow, Succeed!</p>
+        </div>
+    </header>
+
+    <section id="register">
+        <div class="container">
+            <h2>Register New Account</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="new-username">Username</label>
+                    <input type="text" id="new-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Password</label>
+                    <input type="password" id="new-password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p id="register-message" style="color: green; display: none;">Registration successful! Please login.</p>
+            <p><a href="login.html" class="register-link">Back to Login</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 E-Learn Hub - All Rights Reserved</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>

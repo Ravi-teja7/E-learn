@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course - E-Learn Hub</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Course Content</h1>
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </header>
+
+    <section id="course-content">
+        <div class="container">
+            <h2 id="course-title">Course Title</h2>
+            <div id="lessons"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 E-Learn Hub - All Rights Reserved</p>
+    </footer>
+
+    <script src="course.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseId = urlParams.get('course') || 'web-dev'; // Default to web-dev if not specified
+            const course = courseData[courseId] || courseData['web-dev'];
+
+            document.getElementById('course-title').textContent = course.title;
+
+            const lessonsDiv = document.getElementById('lessons');
+            course.lessons.forEach(lesson => {
+                const lessonCard = document.createElement('div');
+                lessonCard.className = 'lesson-card';
+                lessonCard.innerHTML = `
+                    <h3>${lesson.title}</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="${lesson.video}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="actions">
+                        <a href="${lesson.notes}" class="btn notes-btn"><i class="fas fa-sticky-note"></i> Notes</a>
+                    </div>
+                `;
+                lessonsDiv.appendChild(lessonCard);
+            });
+        });
+    </script>
+</body>
+</html>

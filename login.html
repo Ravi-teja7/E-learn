@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - E-Learn Hub</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>E-Learn Hub</h1>
+            <p>Learn, Grow, Succeed!</p>
+        </div>
+    </header>
+
+    <section id="login">
+        <div class="container">
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p id="error-message" style="color: red; display: none;">Invalid username or password.</p>
+            <p><a href="register.html" class="register-link">Register</a> if you are a new user.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 E-Learn Hub - All Rights Reserved</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
